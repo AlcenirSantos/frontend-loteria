@@ -1,0 +1,23 @@
+[[redirects]]
+  from = "/api/v1/*"
+  to = "https://hmg-backoffice.erp-atual.de/api/v1/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    Authorization = "Basic ZXJwLWFwcDpAbmd1bEByMA=="
+
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://hmg-backoffice.erp-atual.de/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    Authorization = "Basic ZXJwLWFwcDpAbmd1bEByMA=="
+
+
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
