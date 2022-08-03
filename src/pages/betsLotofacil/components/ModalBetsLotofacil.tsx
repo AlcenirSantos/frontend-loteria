@@ -1,4 +1,4 @@
-import { checkBets, generateBets } from '@/services/betsLotomania';
+import { checkBets, generateBets } from '@/services/betsLotofacil';
 import { ModalForm } from '@ant-design/pro-form';
 import { Col, Form, Input, notification, Row, Select } from 'antd';
 import { useState } from 'react';
@@ -9,7 +9,7 @@ interface Props {
   setModalVisible: Function;
 }
 
-export default function ModalBetsLotomania({ createModalVisible, setModalVisible, reload }: Props) {
+export default function ModalBetsLotofacil({ createModalVisible, setModalVisible, reload }: Props) {
   const [type, setType] = useState('G');
 
 

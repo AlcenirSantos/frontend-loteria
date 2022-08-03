@@ -26,6 +26,18 @@
     component: './lotomania/',
   },
   {
+    path: '/betsLotofacil',
+    name: 'betsLotofacil',
+    icon: 'ContainerOutlined',
+    component: './betsLotofacil/',
+  },
+  {
+    path: '/lotofacil',
+    name: 'lotofacil',
+    icon: 'ContainerOutlined',
+    component: './lotofacil/',
+  },
+  {
     path: '/users',
     name: 'user',
     icon: 'UsergroupAddOutlined',

@@ -1,4 +1,4 @@
-import { createLotomania } from '@/services/lotomania';
+import { createLotofacil } from '@/services/lotofacil';
 import { createUser, updateUser } from '@/services/users';
 import { MaskTypes } from '@/utils/hooks/mask';
 import { ModalForm } from '@ant-design/pro-form';
@@ -21,7 +21,7 @@ export default function ModalRegister({
 }: Props) {
   async function handleAdd(form: API.User) {
     if (values) await updateUser({ ...values, ...form });
-    else await createLotomania(form);
+    else await createLotofacil(form);
 
     notification.success({
       message: 'Sucesso!',
