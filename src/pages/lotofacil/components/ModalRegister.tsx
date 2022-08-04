@@ -69,39 +69,29 @@ export default function ModalRegister({
       </Row>
       <Row gutter={16}>
         <Col span={6}>
-          <Form.Item label="quinze" name="quinze">
+          <Form.Item label="Onze" name="onze">
             <Input />
           </Form.Item>
         </Col>
         <Col span={6}>
-          <Form.Item label="dezesseis" name="dezesseis">
+          <Form.Item label="Doze" name="doze">
             <Input />
           </Form.Item>
         </Col>
         <Col span={6}>
-          <Form.Item label="dezessete" name="dezessete">
-            <Input />
-          </Form.Item>
-        </Col>
-        <Col span={6}>
-          <Form.Item label="dezoito" name="dezoito">
+          <Form.Item label="Treze" name="treze">
             <Input />
           </Form.Item>
         </Col>
       </Row>
       <Row gutter={16}>
         <Col span={6}>
-          <Form.Item label="dezenove" name="dezenove">
+          <Form.Item label="Quatorze" name="quatorze">
             <Input />
           </Form.Item>
         </Col>
         <Col span={6}>
-          <Form.Item label="vinte" name="vinte">
-            <Input />
-          </Form.Item>
-        </Col>
-        <Col span={6}>
-          <Form.Item label="zero" name="zero">
+          <Form.Item label="Quinze" name="quinze">
             <Input />
           </Form.Item>
         </Col>
