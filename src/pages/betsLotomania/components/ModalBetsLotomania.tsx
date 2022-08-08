@@ -24,6 +24,7 @@ export default function ModalBetsLotomania({ createModalVisible, setModalVisible
     <ModalForm
       modalProps={{
         destroyOnClose: true,
+        onCancel: () => { setType('G') }
       }}
       title={'Apostas'}
       width="300px"
@@ -32,22 +33,23 @@ export default function ModalBetsLotomania({ createModalVisible, setModalVisible
       onFinish={async (value) => {
         await handleAdd(value);
         setModalVisible(false);
+        setType('G')
         reload()
       }}
     >
-      <Form.Item label="Tipo">
-        <Select defaultValue="G" style={{ width: 120 }} allowClear onChange={(e) => setType(e)}>
+      <Form.Item label="Tipo" rules={[{ required:true }]}>
+        <Select defaultValue="G" style={{ width: 120 }} onChange={(e) => setType(e)}>
           <Select.Option value="G">Gerar Jogo</Select.Option>
           <Select.Option value="C">Conferir Jogo</Select.Option>
         </Select>
       </Form.Item>
       <Row gutter={16}>
         <Col span={12}>
-          <Form.Item label="Concurso" name="concurso">
+          <Form.Item label="Concurso" name="concurso" rules={[{ required:true }]}>
             <Input />
           </Form.Item>
         </Col>
-        {type === 'G' ? <Col span={12}><Form.Item label="QTD" name="quantidade">
+        {type === 'G' ? <Col span={12}><Form.Item label="QTD" name="quantidade" rules={[{ required:true }]}>
           <Input />
         </Form.Item></Col> : null}
 

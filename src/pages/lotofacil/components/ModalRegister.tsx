@@ -34,9 +34,9 @@ export default function ModalRegister({
         destroyOnClose: true,
       }}
       initialValues={{
-        name: values?.name,
-        login: values?.login,
-        active: values?.active,
+        onze: 5,
+        doze: 10,
+        treze: 25
       }}
       title={values ? 'Editar Sorteio' : 'Novo Sorteio'}
       width="500px"
