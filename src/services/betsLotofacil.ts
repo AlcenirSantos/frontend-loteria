@@ -43,3 +43,14 @@ export async function generateBets(entry: API.Company) {
     },
   }).then((data) => ({ data }));
 }
+export async function generateBetsRules(entry: API.Company) {
+  const jwt = await getAuthority();
+
+  return request<API.Company>(`/api/v1/lotofacil/generateBetsRules`, {
+    method: 'POST',
+    data: entry,
+    headers: {
+      Authorization: `bearer ${jwt}`,
+    },
+  }).then((data) => ({ data }));
+}
