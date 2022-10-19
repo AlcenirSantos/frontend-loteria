@@ -32,6 +32,7 @@ export default function ModalBetsLotofacil({ createModalVisible, setModalVisible
     } else if (type === 'C') {
       await checkBets(form);
     } else if (type === 'GR') {
+      if (!form.numbersDescarted) form.numbersDescarted = [];
       await generateBetsRules(form);
     }
     notification.success({
