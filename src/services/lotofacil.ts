@@ -33,3 +33,18 @@ export async function createLotofacil(entry: API.User) {
   }).then((data) => ({ data }));
 }
 
+export async function analizedNumbers(
+  params?: Record<string, unknown>,
+  sort?: Record<string, API.SortOrder>,
+) {
+  const jwt = await getAuthority();
+  return request<API.User>('/api/v1/lotofacil/analizedNumbers', {
+    method: 'GET',
+    params: transformParams(params, sort),
+    headers: {
+      Authorization: `bearer ${jwt}`,
+    },
+  }).then((data) => ({
+    data,
+  }));
+}
