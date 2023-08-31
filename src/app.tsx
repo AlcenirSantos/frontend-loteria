@@ -53,7 +53,7 @@ export async function getInitialState(): Promise<{
 }
 const authHeaderInterceptor = (url: string, options: RequestOptionsInit) => {
   return { //http://7de60790bfbd.sn.mynetname.net:8080/
-    url: `http://7de60790bfbd.sn.mynetname.net:8080${url}`,
+    url: `http://7de60790bfbd.sn.mynetname.net:50800${url}`,
     options: {
       ...options,
       interceptors: true,
