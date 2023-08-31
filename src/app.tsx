@@ -52,8 +52,8 @@ export async function getInitialState(): Promise<{
   };
 }
 const authHeaderInterceptor = (url: string, options: RequestOptionsInit) => {
-  return {
-    url: `https://jogos-loterias.herokuapp.com${url}`,
+  return { //http://7de60790bfbd.sn.mynetname.net:8080/
+    url: `http://7de60790bfbd.sn.mynetname.net:8080${url}`,
     options: {
       ...options,
       interceptors: true,
